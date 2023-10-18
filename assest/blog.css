@@ -4,6 +4,7 @@
 body{
     display: flex;
     flex-direction: column;
+    background-color: rgb(255, 255, 255);
 }
 nav {
 
@@ -55,14 +56,9 @@ nav {
     gap: 35px;
 
 }
-
-
-hr {
-    height: 2px;
-    background-color: rgb(97, 97, 97);
-    width: 100%;
+.navmenu button a{
+    border: 0px;
 }
-
 .navmenu button {
     border: 0px;
     background-color: white;
@@ -73,67 +69,68 @@ hr {
     color: rgb(40, 94, 76);
 }
 
-.phtcont {
+.blogsing {
+    background-image: url(https://preview.colorlib.com/theme/monarch/images/bg_1.jpg.webp);
+height: 400px;
+width: 100%;
+background-position: center;
+}
+.blogsing h1{
+    font-size: 36px;
+   color: black;
+   display: flex;
+  justify-content: center;
+ padding-top: 150px;
+}
+.cardscont{
+    margin-left: 10%;
+    width: 80%;
+    height: 1000px;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding-top: 50px;
-    padding-bottom: 60px;
-   
 }
-
-.phtcont .photos img {
-    width: 450px;
-    height: 220px;
-    object-fit: cover;
+.cards{
+    width: 300px;
+    height: 380px;
+    position: relative;
+    background-color: rgb(191, 216, 216);
+   
     
 }
-
-.photos {
-    position: relative;
-    display: flex;
+.cards img{
+   width: 300px;
+    height: 200px;
+    object-fit: cover;
+    
+    
 }
-
-.photosovr {
+.cards .date{
+    background-color: rgb(110, 214, 181);
+   
+    padding: 10px 25px;
     position: absolute;
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .4s;
+    top: 45%;
+    left: 20%;
+    border-radius: 12px;
+    
+}
+.cards .txt{
+    padding-top: 30px;
+    padding-left: 5px;
+    color: rgb(122, 122, 122);
+    font-size: 18px;
+}
+.cards .txt h4:hover{
+   color: rgb(48, 70, 80);
+}
+.cards .txt p{
+    padding-top: 10px;
+    text-align: left;
 }
 
-.photos:hover .photosovr {
-    opacity: 0.7;
-}
 
-.photos:hover .iconovr {
-    opacity: 1 !important;
-}
-
-.photos .iconovr {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(118, 168, 152);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    align-self: center;
-    font-size: 20px;
-    opacity: 0;
-    position: absolute;
-    z-index: 2;
-    left: 45%;
-}
 
 footer {
     display: inline-flex;
@@ -211,58 +208,12 @@ cursor: pointer;
     align-items: center;
     padding-bottom: 80px;
 }
-@media only screen and (max-width:1600px) {
-    .phtcont{
-        grid-template-columns: auto auto auto ;
-        
-    }
-    .photos img{
-        max-width: 450px;
-    height: 220px;
-    }
-    footer{
-        max-width: 50%;
-        display: flex;
-        flex-direction: column;
-    }
-}
-@media only screen and (max-width:1400px) {
-    .phtcont{
-        grid-template-columns: auto auto ;
-    }
-    .photos img{
-        max-width: 450px;
-    height: 220px;
-    }
-    
-    .navmenu{
-        display: none;
-    }
-    .navresp{
-        display: block;
-        justify-self: center;
-        align-self: center;
-    }
-}
 @media only screen and (max-width:1200px) {
-    .phtcont{
-        grid-template-columns: auto  ;
-    }
-    .photos img{
-        max-width: 450px;
-    height: 220px;
-    }
-}
-
-
-
-@media only screen and (max-width:1000px) {
-    .phtcont{
-        grid-template-columns: auto ;
-    }
-    .photos img{
-        max-width: 450px;
-    height: 220px;
+    .cardscont{
+       width: 100vh;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
     }
     
 }
